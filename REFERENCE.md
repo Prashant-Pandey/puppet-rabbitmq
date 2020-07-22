@@ -51,7 +51,7 @@ include rabbitmq
 ```puppet
 class { 'rabbitmq':
   service_manage    => false,
-  port              => '5672',
+  port              => 5672,
   delete_guest_user => true,
 }
 ```
@@ -77,7 +77,7 @@ class { 'rabbitmq':
 
 ```puppet
 class { 'rabbitmq':
-  port                  => '5672',
+  port                  => 5672,
   environment_variables => {
     'NODENAME'    => 'node01',
     'SERVICENAME' => 'RabbitMQ'
@@ -89,7 +89,7 @@ class { 'rabbitmq':
 
 ```puppet
 class { 'rabbitmq':
-  port             => '5672',
+  port             => 5672,
   config_variables => {
     'hipe_compile' => true,
     'frame_max'    => 131072,
@@ -102,7 +102,7 @@ class { 'rabbitmq':
 
 ```puppet
 class { 'rabbitmq':
-  port                    => '5672',
+  port                    => 5672,
   config_kernel_variables => {
     'inet_dist_listen_min' => 9100,
     'inet_dist_listen_max' => 9105,
